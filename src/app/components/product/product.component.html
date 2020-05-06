@@ -1,0 +1,11 @@
+<div (click)="openAddToCart()" class="item" style="cursor: pointer;">
+  <div class="item-details with-image">
+    <h5 class="item-title">{{ product.name }}</h5>
+  </div>
+  <h5 class="item-price">${{ product.price }}</h5>
+  <img
+    alt="productImage"
+    class="item-img"
+    [src]="product.images[0]"
+  />
+</div>

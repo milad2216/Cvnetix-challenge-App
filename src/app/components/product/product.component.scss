@@ -1,0 +1,72 @@
+.item:hover {
+    -webkit-box-shadow: 0 10px 35px 0 rgba(0,0,0,.15);
+    box-shadow: 0 10px 35px 0 rgba(0,0,0,.15);
+}
+
+.item {
+    background: #fff;
+    min-height: 150px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+}
+
+.item .with-image {
+    width: calc(100% - 150px);
+}
+
+.item .item-details {
+    position: relative;
+    padding: 15px;
+}
+
+.item h5 {
+    font-size: 1em!important;
+    line-height: 1.1em!important;
+    margin: 0!important;
+}
+
+.item .item-details p {
+    color: #676c6c;
+    font-size: .8em;
+    padding-top: 9px;
+    margin: 0!important;
+}
+
+.block-with-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-height: 1em;
+    max-height: 4.5em;
+}
+
+.item .item-price {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+}
+
+.item h5 {
+    font-size: 1em!important;
+    line-height: 1.1em!important;
+    margin: 0!important;
+}
+
+.item .item-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.modal-xl .modal-lg {
+    max-width: 90%;
+  }

@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Cvnetix-challenge app is running!');
+    expect(compiled.querySelector('h2.header').textContent).toContain('Cvnetix-challenge App');
   });
 });

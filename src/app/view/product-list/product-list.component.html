@@ -1,0 +1,10 @@
+<div class="container mt-5" role="main">
+  <div class="row">
+    <div
+      *ngFor="let product of products; index as i"
+      class="col-lg-4 col-md-12"
+    >
+      <product [item]="product"></product>
+    </div>
+  </div>
+</div>

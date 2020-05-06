@@ -1,0 +1,72 @@
+<div class="row" style="overflow: hidden;">
+  <div class="close-modal">
+    <fa-icon [icon]="faTimes" (click)="closeModal()"></fa-icon>
+  </div>
+  <div class="col-lg-6 col-md-12 gallery">
+    <div class="thumbnail-container">
+      <div class="thumbs">
+        <div
+          [class]="selectedImage == image ? 'thumb-item actice' : 'thumb-item'"
+          *ngFor="let image of product.images; index as i"
+          (mouseenter)="mouseEnter(image)"
+        >
+          <img [src]="image" />
+        </div>
+      </div>
+    </div>
+    <div class="product-intro">
+      <div class="product-slide">
+        <img [src]="selectedImage" />
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-5 col-md-12 details">
+    <h5>{{ product.name }}</h5>
+    <span>In Stock SKU: smshirt001904425441</span>
+    <div class="d-flex mt-3">
+      <h2>US${{ product.price }}</h2>
+      <span class="orginal-price">US${{ product.price }}</span>
+    </div>
+    <div class="mt-2 d-flex">
+      <fa-icon [icon]="faShippingFast"></fa-icon>
+      <span class="ml-2">Shipping cost $40.00 ,in 2 - 3 business days</span>
+    </div>
+    <div class="mt-2 size-guide">
+      <span>Size Guide</span>
+      <ul>
+        <li
+          (click)="selectSize(size)"
+          [class]="selectedSize == size ? 'selected' : ''"
+          *ngFor="let size of product.sizes; index as i"
+        >
+          {{ size }}
+        </li>
+      </ul>
+    </div>
+    <div class="mt-1 d-flex qty-container">
+      <span class="qty-title">Qty</span>
+      <fa-icon [icon]="faMinus" (click)="dec()" class="ml-2"></fa-icon>
+      <span class="ml-2 qty-value">{{ quantity }}</span>
+      <fa-icon [icon]="faPlus" (click)="inc()" class="ml-2"></fa-icon>
+    </div>
+    <div class="mt-5 btn-container">
+      <div class="d-flex">
+        <button (click)="addToCart()" class="btn btn-addtocart">ADD TO CART</button>
+        <fa-icon
+          (click)="toggleFavorite()"
+          [icon]="favorite ? faHeart : faHeartO"
+          class="ml-5"
+        ></fa-icon>
+      </div>
+      <div class="w-100">
+        <button class="btn btn-buynow">BUY NOW</button>
+      </div>
+      <div class="w-100">
+        <button class="btn btn-viewdetails">VIEW PRODUCT DETAILS</button>
+      </div>
+    </div>
+    <div >
+      <span class="text-danger">{{error}}</span>
+    </div>
+  </div>
+</div>
